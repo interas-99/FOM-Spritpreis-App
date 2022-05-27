@@ -1,1 +1,35 @@
-<p>tankstelle works!</p>
+
+<mdb-card class="card" [ngClass]="isOpen === true ? 'is-open' : 'is-closed'">
+
+  <div class="header">
+    <div class="title">
+      <h2>{{name}}</h2>
+      <p>{{brand}}</p>
+    </div>
+  </div>
+
+  <div class="card-details">
+    <div class="anschrift">
+      <p>{{street}} {{houseNumber}}</p>
+      <p>{{postCode}} {{place}}</p>
+    </div>
+
+    <div class="preise">
+      <div class="price-item">
+        <p class="item-title">Diesel</p>
+        <p class="item-price">{{disel}} €</p>
+      </div>
+      <div class="price-item">
+        <p class="item-title">Super (e5)</p>
+        <p class="item-price">{{e5}} €</p>
+      </div>
+      <div class="price-item">
+        <p class="item-title">Super (e10)</p>
+        <p class="item-price">{{e10}} €</p>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn-select" mdbBtn type="button" color="grey" outline="true" mdbWavesEffect>Auswählen</button>
+
+</mdb-card>
